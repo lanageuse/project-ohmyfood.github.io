@@ -1,0 +1,21 @@
+.btn{
+    font-weight: $font-weight-semi-bold;
+    &__gradient{
+        color:$white;
+        padding: toRem(16) toRem(24);
+        border-radius:$radius-xl;
+        background: linear-gradient(358deg, #9356DC -49.44%, #FF79DA 153.93%);
+        box-shadow: 0 4px 10px rgba($text-color, 0.25);
+        &:hover{
+
+        }
+    }
+    &__tags{
+        display: block;
+        background: $green-light-color;
+        color:$green-dark-color;
+        border-radius: $radius-xs;
+        padding: 10px 12px;
+        box-shadow: 0 2px 4px rgba($text-color, 0.15);
+    }
+}
