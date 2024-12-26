@@ -3,8 +3,35 @@ $font-family-brand : 'Shrikhand', cursive;
 $font-family-text : 'Roboto', sans-serif;
 $font-size-default : 16px;
 
-
 // font-weight
 $font-weight-normal : 300;
 $font-weight-semi-bold : 500;
 $font-weight-bold: 700;
+
+//color
+$pink-light-color : #FF79DA;
+$pink-dark-color : #9356DC;
+$green-light-color: #99E2D0;
+$green-dark-color: #008766;
+$blue-light-color: #89C8FA;
+$blue-dark-color: #003A68;
+$grey-light-color : #EAEAEA;
+$grey-dark-color: #353535;
+$text-color:#000000;
+$bg-color:#F6F6F6;
+$white : #FFFFFF;
+
+// font-size
+$text-xxl : toRem(30);
+$text-xl : toRem(30);
+$text-l : toRem(30);
+$text-m : toRem(30);
+$text-s : toRem(30);
+$text-xs : toRem(30);
+$text-xxs : toRem(30);
+
+// border-radius
+$radius-xl : 25px;
+$radius-l : 15px;
+$radius-xs : 2px;
+
