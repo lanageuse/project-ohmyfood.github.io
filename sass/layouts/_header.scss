@@ -1,0 +1,24 @@
+.header {
+  &__nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba($text-color, 0.15);
+    padding: 9px 0;
+    z-index: 2;
+  }
+  &__logo {
+    font-family: $font-family-brand;
+    font-size: $text-xxl;
+  }
+  &__location {
+    display: flex;
+    justify-content: center;
+    gap: toRem(10);
+    background-color: $grey-light-color;
+    color:$grey-dark-color;
+    font-weight: $font-weight-semi-bold;
+    padding: 15px 0;
+    box-shadow: 0 4px 4px rgba($text-color, 0.25);
+  }
+}
