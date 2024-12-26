@@ -48,6 +48,54 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 300;
+  background-color: #F6F6F6;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.btn {
+  font-weight: 500;
+}
+.btn__gradient {
+  color: #FFFFFF;
+  padding: 1rem 1.5rem;
+  border-radius: 25px;
+  background: linear-gradient(358deg, #9356DC -49.44%, #FF79DA 153.93%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+.btn__tags {
+  display: block;
+  background: #99E2D0;
+  color: #008766;
+  border-radius: 2px;
+  padding: 10px 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.header__nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  padding: 9px 0;
+  z-index: 2;
+}
+.header__logo {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.875rem;
+}
+.header__location {
+  display: flex;
+  justify-content: center;
+  gap: 0.625rem;
+  background-color: #EAEAEA;
+  color: #353535;
+  font-weight: 500;
+  padding: 15px 0;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /*# sourceMappingURL=main.css.map */
