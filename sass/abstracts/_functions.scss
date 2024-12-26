@@ -1,0 +1,15 @@
+// Convert pixel to rem
+@function toRem($value) {
+    $remValue: calc($value / 16) + rem; 
+    @return $remValue;
+}
+
+// drop shadow
+@function drop-shadow($size, $color, $length) {
+	$value: ();
+	@for $i from 1 through $length {
+		$shadow: 0 ($size * $i) ($size * $i) #{-$size} $color;
+		$value: append($value, $shadow, comma);
+	}
+	@return $value;
+}
