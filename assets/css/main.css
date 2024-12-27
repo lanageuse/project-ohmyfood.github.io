@@ -67,10 +67,31 @@ a {
   font-weight: 700;
   font-size: 1.5rem;
 }
+.title__brand {
+  font-family: "Shrikhand", cursive;
+  font-weight: 300;
+  font-size: 1.75rem;
+}
 
 .subtitle {
+  position: relative;
   font-size: 1.125rem;
+  font-weight: 300;
   color: #353535;
+}
+.subtitle__underline {
+  font-size: 1rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+}
+.subtitle__underline::after {
+  content: "";
+  display: block;
+  left: 0;
+  bottom: 0;
+  width: 2.5rem;
+  height: 0.1875rem;
+  background: #99E2D0;
 }
 
 .btn {
@@ -144,6 +165,57 @@ a {
 .card__content-location {
   font-size: 1.0625rem;
 }
+.card--restaurant .card__img img {
+  height: 174px;
+}
+.card--restaurant .card__content-title {
+  font-size: 1.125rem;
+}
+.card--restaurant .card__content-location {
+  font-size: 1.0625rem;
+}
+.card--menu {
+  position: relative;
+}
+.card--menu .card__content {
+  align-items: end;
+  padding: 0.9375rem;
+  margin-right: 3.6875rem;
+}
+.card--menu .card__content-title {
+  font-weight: 500;
+}
+.card--menu .card__content-description {
+  font-size: 0.9375rem;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card--menu .card__content-price {
+  font-size: 0.9375rem;
+}
+.card--menu .card__content-check {
+  background-color: #99E2D0;
+  position: absolute;
+  height: 100%;
+  width: 3.6875rem;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card--menu .card__content-check i {
+  border-radius: 25px;
+  background: #FFFFFF;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #99E2D0;
+  vertical-align: middle;
+}
 
 .workflow {
   background: #FFFFFF;
@@ -194,7 +266,7 @@ a {
   display: flex;
   justify-content: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-  padding: 9px 0;
+  padding: 0.875rem 0 0.3125rem 0;
   z-index: 2;
 }
 .header__logo {
