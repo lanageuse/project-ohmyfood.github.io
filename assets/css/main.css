@@ -67,10 +67,31 @@ a {
   font-weight: 700;
   font-size: 1.5rem;
 }
+.title--brand {
+  font-family: "Shrikhand", cursive;
+  font-weight: 300;
+  font-size: 1.75rem;
+}
 
 .subtitle {
+  position: relative;
   font-size: 1.125rem;
+  font-weight: 300;
   color: #353535;
+}
+.subtitle__underline {
+  font-size: 1rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+}
+.subtitle__underline::after {
+  content: "";
+  display: block;
+  left: 0;
+  bottom: 0;
+  width: 2.5rem;
+  height: 0.1875rem;
+  background: #99E2D0;
 }
 
 .btn {
@@ -82,12 +103,12 @@ a {
   padding: 1rem 1.5rem;
   border-radius: 25px;
 }
-.btn__gradient {
+.btn--gradient {
   background: linear-gradient(358deg, #9356DC -49.44%, #FF79DA 153.93%);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   overflow: hidden;
 }
-.btn__gradient:after {
+.btn--gradient:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -98,16 +119,8 @@ a {
   opacity: 0;
   transition: opacity ease-in-out 0.2s;
 }
-.btn__gradient:active:after, .btn__gradient:hover:after, .btn__gradient:focus:after {
+.btn--gradient:active:after, .btn--gradient:hover:after, .btn--gradient:focus:after {
   opacity: 1;
-}
-.btn__tags {
-  background: #99E2D0;
-  color: #008766;
-  border-radius: 2px;
-  font-size: 0.875rem;
-  padding: 0.625rem 0.75rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 .card {
@@ -126,23 +139,71 @@ a {
   object-fit: cover;
   object-position: bottom;
 }
-.card__img .btn__tags {
+.card__badge {
   position: absolute;
   right: 15px;
   top: 15px;
+  background: #99E2D0;
+  color: #008766;
+  border-radius: 2px;
+  font-size: 0.875rem;
+  padding: 0.625rem 0.75rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 .card__content {
   display: flex;
   justify-content: space-between;
   padding: 1rem 0.8125rem 0.75rem;
 }
-.card__content-title {
+.card__info-title {
   font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.625rem;
 }
-.card__content-location {
+.card__info-location {
   font-size: 1.0625rem;
+}
+.card--menu {
+  position: relative;
+}
+.card--menu .card__content {
+  align-items: end;
+  padding: 0.9375rem;
+  margin-right: 3.6875rem;
+}
+.card--menu .card__info-title {
+  font-weight: 500;
+}
+.card--menu .card__info-description {
+  font-size: 0.9375rem;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card--menu .card__price-value {
+  font-size: 0.9375rem;
+}
+.card--menu .card__check {
+  background-color: #99E2D0;
+  position: absolute;
+  height: 100%;
+  width: 3.6875rem;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card--menu .card__check i {
+  border-radius: 25px;
+  background: #FFFFFF;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  color: #99E2D0;
+  vertical-align: middle;
 }
 
 .workflow {
@@ -164,7 +225,7 @@ a {
   font-weight: 500;
   border-radius: 15px;
   padding: 1.625rem 2.125rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   transition: color ease-in-out 0.6s;
   counter-increment: step-counter; /* Incrémente le compteur */
 }
@@ -193,8 +254,8 @@ a {
   position: relative;
   display: flex;
   justify-content: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-  padding: 9px 0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  padding: 0.875rem 0 0.3125rem 0;
   z-index: 2;
 }
 .header__logo {
@@ -209,7 +270,40 @@ a {
   color: #353535;
   font-weight: 500;
   padding: 15px 0;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #353535;
+  color: #FFFFFF;
+  padding: 1.375rem 1.5625rem;
+}
+.footer .title__brand {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4375rem;
+}
+.footer__list-item--semibold {
+  font-weight: 500;
+}
+.footer__list-item a {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6875rem;
+  color: #FFFFFF;
+}
+.footer__list-item a i {
+  display: flex;
+  justify-content: center;
+  font-size: 0.75rem;
+  width: 0.75rem;
 }
 
 /*# sourceMappingURL=main.css.map */

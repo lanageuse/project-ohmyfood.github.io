@@ -17,17 +17,36 @@ a{
     display: flex;
     flex-direction: column;
     gap:rem(20);
-    // padding:rem(18);
 }
 
 .title{
     font-weight: $font-weight-bold;
     font-size:rem(24);
+    &--brand{
+        font-family: $font-family-brand;
+        font-weight: $font-weight-normal;
+        font-size:rem(28);
+    }
 }
 
 .subtitle{
+    position: relative;
     font-size:rem(18);
+    font-weight: $font-weight-normal;
     color:$grey-dark-color;
+    &__underline{
+        font-size:rem(16);
+        line-height: rem(32);
+        text-transform: uppercase;
+        &::after{
+            content: "";
+            display: block;
+            left:0;
+            bottom: 0;
+            width:rem(40);
+            height: rem(3);
+            background: $green-light-color;
+        }
+    }
 }
-
 

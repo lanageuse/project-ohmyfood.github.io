@@ -1,0 +1,35 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
+  background-color: $grey-dark-color;
+  color: $white;
+  padding: rem(22) rem(25);
+  .title__brand {
+    font-size: rem(18);
+    font-weight: $font-weight-semi-bold;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(7);
+    &-item {
+      &--semibold {
+        font-weight: $font-weight-semi-bold;
+      }
+      a {
+        display: flex;
+        align-items: baseline;
+        gap: rem(11);
+        color: $white;
+        i {
+          display: flex;
+          justify-content: center;
+          font-size: rem(12);
+          width: rem(12);
+        }
+        
+      }
+    }
+  }
+}

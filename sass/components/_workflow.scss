@@ -15,7 +15,7 @@
       font-weight: $font-weight-semi-bold;
       border-radius: $radius-m;
       padding: rem(26) rem(34);
-      box-shadow: 0 2px 4px rgba($text-color, 0.15);
+      @include box-shadow(0, 2, 4, 0.15);
       transition: color ease-in-out 0.6s;
       counter-increment: step-counter; /* Incrémente le compteur */
       &::before {
