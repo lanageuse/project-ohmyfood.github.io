@@ -19,19 +19,20 @@ $grey-light-color : #EAEAEA;
 $grey-dark-color: #353535;
 $text-color:#000000;
 $bg-color:#F6F6F6;
+$icon-color:#7E7E7E;
 $white : #FFFFFF;
 
 // font-size
-$text-xxl : toRem(30);
-$text-xl : toRem(30);
-$text-l : toRem(30);
-$text-m : toRem(30);
-$text-s : toRem(30);
-$text-xs : toRem(30);
-$text-xxs : toRem(30);
+$text-xxl : rem(30);
+$text-xl : rem(24);
+$text-xl : rem(18);
+$text-l : rem(17);
+$text-m : rem(16);
+$text-sm : rem(14);
 
 // border-radius
 $radius-xl : 25px;
-$radius-l : 15px;
+$radius-l : 20px;
+$radius-m : 15px;
 $radius-xs : 2px;
 
