@@ -4,22 +4,21 @@
     display: flex;
     justify-content: center;
     @include box-shadow(0, 2, 4, 0.15);
-    padding: rem(14) 0 rem(5) 0 ;
+    padding: rem(14) 0 rem(5) 0;
     z-index: 2;
   }
   &__logo {
     font-family: $font-family-brand;
-    font-size: $text-xxl;
+    font-size: rem(30);
   }
   &__location {
     display: flex;
     justify-content: center;
     gap: rem(10);
     background-color: $grey-light-color;
-    color:$grey-dark-color;
+    color: $grey-dark-color;
     font-weight: $font-weight-semi-bold;
     padding: 15px 0;
     @include box-shadow(0, 4, 4, 0.25);
-
   }
 }
