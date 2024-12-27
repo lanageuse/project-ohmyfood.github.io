@@ -14,7 +14,7 @@
   &__location {
     display: flex;
     justify-content: center;
-    gap: toRem(10);
+    gap: rem(10);
     background-color: $grey-light-color;
     color:$grey-dark-color;
     font-weight: $font-weight-semi-bold;
