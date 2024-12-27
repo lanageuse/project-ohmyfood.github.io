@@ -1,3 +1,15 @@
-@mixin bg-gradient{
+// Mixin pour appliquer un dégradé linéaire personnalisé
+// Exemple d'utilisation : @include bg-gradient;
+@mixin bg-gradient {
     background: linear-gradient(358deg, $pink-dark-color -49.44%, $pink-light-color 153.93%);
+}
+
+// Mixin pour générer une ombre personnalisée
+// Paramètres :
+// - $x : décalage horizontal de l'ombre (en pixels).
+// - $y : décalage vertical de l'ombre (en pixels).
+// - $blur : rayon de flou de l'ombre (en pixels).
+// - $opacity : opacité de la couleur de l'ombre (entre 0 et 1).
+@mixin box-shadow($x, $y, $blur, $opacity) {
+    box-shadow: $x + px $y + px $blur + px rgba($text-color, $opacity);
 }

@@ -14,6 +14,9 @@
     flex-direction: column;
     gap: rem(7);
     &-item {
+      &--semibold {
+        font-weight: $font-weight-semi-bold;
+      }
       a {
         display: flex;
         align-items: baseline;
@@ -25,9 +28,7 @@
           font-size: rem(12);
           width: rem(12);
         }
-        &.semibold {
-          font-weight: $font-weight-semi-bold;
-        }
+        
       }
     }
   }

@@ -22,7 +22,7 @@ a{
 .title{
     font-weight: $font-weight-bold;
     font-size:rem(24);
-    &__brand{
+    &--brand{
         font-family: $font-family-brand;
         font-weight: $font-weight-normal;
         font-size:rem(28);
