@@ -1,21 +1,41 @@
-.btn{
-    font-weight: $font-weight-semi-bold;
-    &__gradient{
-        color:$white;
-        padding: toRem(16) toRem(24);
-        border-radius:$radius-xl;
-        background: linear-gradient(358deg, #9356DC -49.44%, #FF79DA 153.93%);
-        box-shadow: 0 4px 10px rgba($text-color, 0.25);
-        &:hover{
+.btn {
+  position: relative;
+  display: block;
+  text-align: center;
+  font-weight: $font-weight-semi-bold;
+  color: $white;
+  padding: rem(16) rem(24);
+  border-radius: $radius-xl;
+  &__gradient {
+    @include bg-gradient;
+    box-shadow: 0 4px 10px rgba($text-color, 0.25);
+    overflow: hidden;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      right: 0;
+      top: 0;
+      background: rgba($white, 0.15);
+      opacity: 0;
+      transition: opacity ease-in-out 0.2s;
+    }
+    &:active,
+    &:hover,
+    &:focus {
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
 
-        }
-    }
-    &__tags{
-        display: block;
-        background: $green-light-color;
-        color:$green-dark-color;
-        border-radius: $radius-xs;
-        padding: 10px 12px;
-        box-shadow: 0 2px 4px rgba($text-color, 0.15);
-    }
+  &__tags {
+    background: $green-light-color;
+    color: $green-dark-color;
+    border-radius: $radius-xs;
+    font-size: rem(14);
+    padding: rem(10) rem(12);
+    box-shadow: 0 2px 4px rgba($text-color, 0.15);
+  }
 }
