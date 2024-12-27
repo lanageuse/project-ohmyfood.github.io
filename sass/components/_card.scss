@@ -1,0 +1,34 @@
+.card{
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    border-radius: $radius-m;
+    overflow: hidden;
+    &__img{
+        position: relative;
+        img{
+            height: 174px;
+            width: 100%;
+            object-fit: cover;
+            object-position: bottom;
+        }
+        .btn__tags{
+            position:absolute;
+            right: 15px;
+            top:15px;
+        }
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        padding: rem(16) rem(13) rem(12);
+        &-title{
+            font-weight: $font-weight-bold;
+            font-size:$text-xl;
+            line-height: rem(26);
+        }
+        &-location{
+            font-size:$text-l;
+        }
+    }
+}

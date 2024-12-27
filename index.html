@@ -1,11 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oh my food</title>
+    <!-- fontawesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/main.css">
 </head>
+
 <body>
-    
+    <!-- header -->
+    <header class="header">
+        <nav class="header__nav">
+            <a href="#" class="header__logo">
+                <h1>ohmyfood</h1>
+            </a>
+        </nav>
+        <div class="header__location">
+            <i class="fa-solid fa-location-dot"></i> Paris, Belleville
+        </div>
+    </header>
+    <div class="main">
+            <a href="#" class="btn btn__gradient"><span>Explorer nos restaurants</span></a>
+            <article class="card">
+                <div class="card__img">
+                    <span class="btn btn__tags">Nouveau</span>
+                    <img src="./assets/images/restaurants/la-palette-du-gout.jpg" alt="">
+                </div>
+                <div class="card__content">
+                    <div>
+                        <h3 class="card__content-title">La palette du goût</h3>
+                        <p class="card__content-location">Ménilmontant</p>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+            </article>
+            <div class="workflow">
+                <ul class="workflow__list">
+                    <li class="workflow__list-item">
+                        <i class="fa-solid fa-mobile-screen-button"></i> Choisissez un restaurant
+                    </li>
+                    <li class="workflow__list-item">
+                        <i class="fa-solid fa-list-ul"></i> Composez votre menu
+                    </li>
+                    <li class="workflow__list-item">
+                        <i class="fa-solid fa-store"></i> Dégustez au restaurant
+                    </li>
+                    <li class="workflow__list-item">
+                        <i class="fa-solid fa-store"></i> Dégustez au restaurant
+                    </li>
+                </ul>
+            </div>
+    </div>
 </body>
+
 </html>

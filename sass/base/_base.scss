@@ -1,0 +1,33 @@
+// Import des gg fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap');
+
+body {
+    font-family: $font-family-text;
+    font-size: $font-size-default;
+    font-weight: $font-weight-normal;
+    background-color: $bg-color;
+}
+
+a{
+    color: $text-color;
+    text-decoration: none;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    gap:rem(20);
+    // padding:rem(18);
+}
+
+.title{
+    font-weight: $font-weight-bold;
+    font-size:rem(24);
+}
+
+.subtitle{
+    font-size:rem(18);
+    color:$grey-dark-color;
+}
+
+
