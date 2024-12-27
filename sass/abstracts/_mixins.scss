@@ -1,3 +1,7 @@
 @mixin bg-gradient{
     background: linear-gradient(358deg, $pink-dark-color -49.44%, $pink-light-color 153.93%);
 }
+
+@mixin box-shadow($x, $y, $blur, $opacity){
+    box-shadow: $x + px $y + px $blur + px rgba($text-color, $opacity);
+}
