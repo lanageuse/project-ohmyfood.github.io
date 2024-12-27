@@ -1,90 +1,94 @@
-// Card Base Styles 
+// Card Base Styles
 .card {
-    background-color: $white;
-    display: flex;
-    flex-direction: column;
-    border-radius: $radius-m;
-    overflow: hidden;
-  
-    &__img {
-      position: relative;
-      img {
-        height: 174px;
-        width: 100%;
-        object-fit: cover;
-        object-position: bottom;
-      }
-      .btn__badge {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-      }
-    }
-  
-    &__content {
-      display: flex;
-      justify-content: space-between;
-      padding: rem(16) rem(13) rem(12);
-  
-      &-title {
-        font-weight: $font-weight-bold;
-        font-size: rem(18);
-        line-height: rem(26);
-      }
-  
-      &-location {
-        font-size: rem(17);
-      }
-    }
-  
-    // Variantes card restaurant
-    &--restaurant {
-      .card__img img {
-        height: 174px;
-      }
-    }
-  // Variantes card menu
-    &--menu {
-        position: relative;
-        .card__content{
-            align-items: end;
-            padding: rem(15);
-            margin-right:rem(59);
-            &-title{
-                font-weight: $font-weight-semi-bold;
-            }
-            &-description{
-                font-size: rem(15);
-                max-width: 200px;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-            &-price{
-                font-size: rem(15);
-            }
-            &-check{
-                background-color: $green-light-color;
-                position: absolute;
-                height: 100%;
-                width:rem(59);
-                right:0;
-                top:0;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                i{
-                    border-radius: $radius-xl;
-                    background: $white;
-                    width: 20px;
-                    height: 20px;
-                    line-height: 20px;
-                    text-align: center;
-                    color: $green-light-color;
-                    vertical-align: middle;
-                }
-            }
-        }
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  border-radius: $radius-m;
+  overflow: hidden;
+
+  &__img {
+    position: relative;
+    img {
+      height: 174px;
+      width: 100%;
+      object-fit: cover;
+      object-position: bottom;
     }
   }
-  
+  &__badge {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: $green-light-color;
+    color: $green-dark-color;
+    border-radius: $radius-xs;
+    font-size: rem(14);
+    padding: rem(10) rem(12);
+    @include box-shadow(0, 2, 4, 0.15);
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding: rem(16) rem(13) rem(12);
+  }
+
+  &__info {
+    &-title {
+      font-weight: $font-weight-bold;
+      font-size: rem(18);
+      line-height: rem(26);
+    }
+
+    &-location {
+      font-size: rem(17);
+    }
+  }
+  // Variantes card menu
+  &--menu {
+    position: relative;
+    .card__content {
+      align-items: end;
+      padding: rem(15);
+      margin-right: rem(59);
+    }
+    .card__info{
+      &-title {
+        font-weight: $font-weight-semi-bold;
+      }
+      &-description {
+        font-size: rem(15);
+        max-width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    .card__price {
+      &-value{
+      font-size: rem(15);
+      }
+    }
+    .card__check {
+      background-color: $green-light-color;
+      position: absolute;
+      height: 100%;
+      width: rem(59);
+      right: 0;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      i {
+        border-radius: $radius-xl;
+        background: $white;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        color: $green-light-color;
+        vertical-align: middle;
+      }
+    }
+  }
+}

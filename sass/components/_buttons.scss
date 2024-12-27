@@ -6,7 +6,7 @@
   color: $white;
   padding: rem(16) rem(24);
   border-radius: $radius-xl;
-  &__gradient {
+  &--gradient {
     @include bg-gradient;
     @include box-shadow(0, 4, 10, 0.25);
     overflow: hidden;
@@ -28,14 +28,5 @@
         opacity: 1;
       }
     }
-  }
-
-  &__badge {
-    background: $green-light-color;
-    color: $green-dark-color;
-    border-radius: $radius-xs;
-    font-size: rem(14);
-    padding: rem(10) rem(12);
-    @include box-shadow(0, 2, 4, 0.15)
   }
 }
