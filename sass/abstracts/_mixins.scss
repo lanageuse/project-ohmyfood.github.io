@@ -13,3 +13,12 @@
 @mixin box-shadow($x, $y, $blur, $opacity) {
     box-shadow: $x + px $y + px $blur + px rgba($text-color, $opacity);
 }
+
+// Mixin pour générer l'animation des lettres du loader
+// Paramètres :
+// - $duration : durée de l'anim
+// - $animation-name : nom de la @keyframes
+@mixin letter-animation($duration: 0.5s, $animation-name: fade-in) {
+    display: inline-block;
+    animation: $animation-name $duration cubic-bezier(0.83,-0.02, 0.44, 1.33) forwards;
+  }
