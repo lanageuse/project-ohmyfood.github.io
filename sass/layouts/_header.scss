@@ -3,6 +3,7 @@
     position: relative;
     display: flex;
     justify-content: center;
+    background-color: $white;
     @include box-shadow(0, 2, 4, 0.15);
     padding: rem(14) 0 rem(5) 0;
     z-index: 2;
@@ -14,7 +15,7 @@
   &__location {
     display: flex;
     justify-content: center;
-    gap: rem(10);
+    gap: rem(17);
     background-color: $grey-light-color;
     color: $grey-dark-color;
     font-weight: $font-weight-semi-bold;
