@@ -16,7 +16,6 @@ a{
 .main{
     display: flex;
     flex-direction: column;
-    gap:rem(20);
 }
 
 .title{
@@ -34,7 +33,7 @@ a{
     font-size:rem(18);
     font-weight: $font-weight-normal;
     color:$grey-dark-color;
-    &__underline{
+    &--underline{
         font-size:rem(16);
         line-height: rem(32);
         text-transform: uppercase;
@@ -50,3 +49,38 @@ a{
     }
 }
 
+//hero section
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    gap: rem(14);
+    align-items: center;
+    text-align: center;
+    padding: rem(39) rem(30) rem(55) rem(30);
+    .title{
+        padding:rem(6) rem(30);
+    }
+}
+
+// process section
+.process{
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    gap: rem(26);
+    padding: rem(49) rem(20)  rem(67) rem(20);
+}
+
+// restaurant section
+.restaurant{
+    display: flex;
+    flex-direction: column;
+    gap: rem(26);
+    padding: rem(55) rem(20)  rem(67) rem(20);
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: rem(18);
+    }
+}

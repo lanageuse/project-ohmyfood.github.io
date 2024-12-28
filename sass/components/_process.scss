@@ -1,11 +1,10 @@
-.workflow {
-  background: $white;
-  padding: rem(50)  rem(20);
+.process {
   &__list {
     display: flex;
     flex-direction: column;
     gap: rem(24);
     counter-reset: step-counter;
+    margin-left: rem(10);
     &-item {
       position: relative;
       display: flex;
