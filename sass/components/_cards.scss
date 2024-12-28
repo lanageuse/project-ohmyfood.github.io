@@ -23,6 +23,7 @@
     color: $green-dark-color;
     border-radius: $radius-xs;
     font-size: rem(14);
+    font-weight: $font-weight-semi-bold;
     padding: rem(10) rem(12);
     @include box-shadow(0, 2, 4, 0.15);
   }
@@ -44,6 +45,35 @@
       font-size: rem(17);
     }
   }
+  &__actions {
+    position: relative;
+    font-size: rem(20);
+    width: rem(20);
+    .card__icon {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: opacity 0.3s ease-in;
+      &.fa-solid{
+        opacity: 0;
+        &::before {
+          background-image: linear-gradient(#b360db, rgb(222 110 219));
+          background-clip: text;
+          color:rgba(0,0,0,0);
+        }
+      }
+    }
+    &:hover{
+      .card__icon {
+        &.fa-regular{
+          opacity: 0;
+        }
+        &.fa-solid{
+          opacity: 1;
+        }
+    }
+  }
+  }
   // Variantes card menu
   &--menu {
     position: relative;
@@ -52,7 +82,7 @@
       padding: rem(15);
       margin-right: rem(59);
     }
-    .card__info{
+    .card__info {
       &-title {
         font-weight: $font-weight-semi-bold;
       }
@@ -65,8 +95,8 @@
       }
     }
     .card__price {
-      &-value{
-      font-size: rem(15);
+      &-value {
+        font-size: rem(15);
       }
     }
     .card__check {
