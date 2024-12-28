@@ -125,6 +125,36 @@ a {
   gap: 1.125rem;
 }
 
+.bookmark--anim {
+  position: relative;
+  font-size: 1.25rem;
+  width: 1.25rem;
+}
+.bookmark__icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.bookmark__icon.fa-solid {
+  opacity: 0;
+}
+.bookmark__icon.fa-solid::before {
+  background-image: linear-gradient(#b360db, rgb(222, 110, 219));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: rgba(0, 0, 0, 0);
+}
+.bookmark__icon.fa-regular {
+  opacity: 1;
+}
+.bookmark:hover .fa-regular, .bookmark :active .fa-regular {
+  opacity: 0;
+}
+.bookmark:hover .fa-solid, .bookmark :active .fa-solid {
+  opacity: 1;
+}
+
 .btn {
   position: relative;
   display: block;
@@ -195,31 +225,6 @@ a {
 }
 .card__info-location {
   font-size: 1.0625rem;
-}
-.card__actions {
-  position: relative;
-  font-size: 1.25rem;
-  width: 1.25rem;
-}
-.card__actions .card__icon {
-  position: absolute;
-  left: 0;
-  top: 0;
-  transition: opacity 0.3s ease-in;
-}
-.card__actions .card__icon.fa-solid {
-  opacity: 0;
-}
-.card__actions .card__icon.fa-solid::before {
-  background-image: linear-gradient(#b360db, rgb(222, 110, 219));
-  background-clip: text;
-  color: rgba(0, 0, 0, 0);
-}
-.card__actions:hover .card__icon.fa-regular {
-  opacity: 0;
-}
-.card__actions:hover .card__icon.fa-solid {
-  opacity: 1;
 }
 .card--menu {
   position: relative;
