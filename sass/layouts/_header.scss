@@ -8,6 +8,11 @@
     padding: rem(14) 0 rem(5) 0;
     z-index: 2;
   }
+  &__home{
+    position: absolute;
+    left:rem(20);
+    top:rem(25);
+  }
   &__logo {
     font-family: $font-family-brand;
     font-size: rem(30);
