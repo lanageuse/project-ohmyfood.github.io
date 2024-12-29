@@ -12,7 +12,7 @@
       align-items: baseline;
       background: $bg-color;
       font-weight: $font-weight-semi-bold;
-      border-radius: $radius-m;
+      border-radius: $radius-md;
       padding: rem(26) rem(34);
       @include box-shadow(0, 2, 4, 0.15);
       transition: color ease-in-out 0.6s;
