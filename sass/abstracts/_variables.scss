@@ -29,4 +29,12 @@ $radius-lg : 20px;
 $radius-md : 15px;
 $radius-xl : 25px;
 
+//breakpoints
+$breakpoints: (
+  "sm": 576px,  // Small (tablette)
+  "md": 768px,  // Medium (tablette large)
+  "lg": 992px,  // Large (desktop)
+  "xl": 1200px, // Extra Large (desktop large)
+  "xxl": 1400px // Extra Extra Large (4K)
+);
 
