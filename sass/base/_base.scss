@@ -35,6 +35,7 @@ a{
     color:$grey-dark-color;
     &--underline{
         font-size:rem(16);
+        font-weight: $font-weight-light;
         line-height: rem(32);
         text-transform: uppercase;
         &::after{
@@ -48,7 +49,7 @@ a{
         }
     }
 }
-
+/******** homepage ********/
 //hero section
 
 .hero{
@@ -71,7 +72,6 @@ a{
     gap: rem(26);
     padding: rem(49) rem(20)  rem(67) rem(20);
 }
-
 // restaurant section
 .restaurant{
     display: flex;
@@ -84,3 +84,4 @@ a{
         gap: rem(18);
     }
 }
+
