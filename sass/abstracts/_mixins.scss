@@ -14,11 +14,11 @@
     box-shadow: $x + px $y + px $blur + px rgba($text-color, $opacity);
 }
 
-// Mixin pour générer l'animation des lettres du loader
+// Mixin pour générer l'animation fade-in (loader & page)
 // Paramètres :
 // - $duration : durée de l'anim
 // - $animation-name : nom de la @keyframes
-@mixin letter-animation($duration: 0.5s, $animation-name: fade-in) {
+@mixin fade-in-animation($duration: 0.5s, $animation-name: fade-in) {
     display: inline-block;
     animation: $animation-name $duration cubic-bezier(0.83,-0.02, 0.44, 1.33) forwards;
   }
