@@ -1,9 +1,9 @@
-// Animation de l'icône favoris
+// Anim bookmark
 .bookmark {
   &--anim {
     position: relative;
-    font-size: rem(20);
-    width: rem(20);
+    font-size: rem(21);
+    width: rem(40);
   }
   // Styles pour les icônes
   &__icon {
@@ -24,146 +24,162 @@
     &.fa-regular {
       opacity: 1;
     }
-    // Animation au survol
+    // hover
   }
-  &:hover, :active {
+  &:hover,
+  :active {
     .fa-regular {
-        opacity:0;
+      opacity: 0;
     }
     .fa-solid {
-        opacity:1;
+      opacity: 1;
     }
-}
+  }
 }
 
-//Animation du loader
+//Anim loader
 .loader {
-    &__content {
-      background: $pink-dark-color;
-      position: fixed;
-      left: 0;
-      right: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: 100;
+  &__content {
+    background: $pink-dark-color;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    animation: fade-out 0.3s ease-out 3s forwards;
+    &--split {
+      flex-grow: 1;
       overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      animation: fade-out 0.3s ease-out 6s forwards;
-      &--split {
-        flex-grow: 1;
-        overflow: hidden;
-        &.screen-top {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: end;
-          animation: split-out 4s ease 4s forwards;
-        }
-      }
-      &--progressbar {
-        background: $grey-light-color;
-        position: relative;
-        overflow: hidden;
-        animation: progress-in 0.8s ease 1.5s forwards, progress-out 0.2s ease 5.6s forwards;
-        &::before {
-          content: "";
-          position: absolute;
-          width: 0%;
-          height: 100%;
-          background: black;
-          animation: loadProgress 2.6s ease-in 2.6s forwards;
-        }
+      &.screen-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        animation: split-out 4s ease 4s forwards;
       }
     }
-    &__logo {
-      padding: 0 rem(20);
-      letter-spacing: rem(-4);
+    &--progressbar {
+      background: darken($pink-dark-color, 20%);
+      position: relative;
       overflow: hidden;
-      animation: loader-out 0.4s cubic-bezier(0.83, -0.02, 0.44, 1.33) 5.3s forwards;
-      & > .title--brand {
-        font-size: rem(40);
-      }
-      .letter {
-        opacity: 0;
-        transform: translateY(80px);
-        @include letter-animation(0.6s, fade-in);
-      }
-      //on boucle pour incrémenter animation-delays
-      @for $i from 1 through 8 {
-        .letter:nth-child(#{$i}) {
-          animation-delay: $i * 0.1s;
-        }
+      animation: progress-in 0.4s ease 0.5s forwards, progress-out 0.2s ease 2.6s forwards;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        background: black;
+        animation: load-progress 1s ease-in 0.8s forwards;
       }
     }
   }
-  //keyframes du loader
-  @keyframes loader-out {
-    from {
-      transform: translateY(0) scale(1.01);
-      opacity: 1;
+  &__logo {
+    padding: 0 rem(20);
+    letter-spacing: rem(-4);
+    overflow: hidden;
+    animation: loader-out 0.4s cubic-bezier(0.83, -0.02, 0.44, 1.33) 2.3s forwards;
+    & > .title--brand {
+      font-size: rem(40);
     }
-    to {
-      transform: translateY(50px) scale(0);
+    .letter {
       opacity: 0;
+      @include fade-in-animation(0.3s, fade-in);
+    }
+    //on boucle pour incrémenter animation-delays
+    @for $i from 1 through 8 {
+      .letter:nth-child(#{$i}) {
+        animation-delay: $i * 0.1s;
+      }
     }
   }
-  @keyframes loadProgress {
-    0% {
-      width: 0%;
-    }
-    25% {
-      width: 20%;
-    }
-    50% {
-      width: 70%;
-    }
-    75% {
-      width: 70%;
-    }
-    100% {
-      width: 100%;
+}
+
+// Anim page restaurant
+.menu-section__items{
+  .menu-item{
+    opacity: 0;
+    @include fade-in-animation(0.6s, fade-in-page);
+    @for $i from 1 through 8 {
+      &:nth-child(#{$i}) {
+        animation-delay: $i * 0.2s;
+      }
     }
   }
-  @keyframes progress-in {
-    0% {
-      height: rem(0);
-      transform: scaleX(0);
-      transform-origin: 50% 50%;
-    }
-    100% {
-      height: rem(4);
-      transform: scaleX(0.25);
-      transform-origin: 50% 50%;
-    }
+}
+
+//keyframes du loader
+@keyframes loader-out {
+  from {
+    transform: translateY(0) scale(1.01);
+    opacity: 1;
   }
-  @keyframes progress-out {
-    0% {
-      height: rem(4);
-      transform: scaleX(0.25);
-      transform-origin: 50% 50%;
-    }
-    100% {
-      height: rem(0);
-      transform: scaleX(0);
-      transform-origin: 50% 50%;
-    }
+  to {
+    transform: translateY(50px) scale(0);
+    opacity: 0;
   }
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-      transform: translateY(60px) scaleX(0.6); // Apparition en glissant légèrement vers le haut
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0px) scaleX(1);
-    }
+}
+@keyframes load-progress {
+  0% {
+    width: 0%;
   }
-  @keyframes fade-out {
-    0% {
-    }
-    100% {
-      display: none;
-    }
+  100% {
+    width: 100%;
   }
-  
+}
+@keyframes progress-in {
+  0% {
+    height: rem(0);
+    opacity: 0;
+    transform: scaleX(0.55);
+    transform-origin: 50% 50%;
+  }
+  100% {
+    height: rem(4);
+    opacity: 1;
+    transform: scaleX(0.35);
+    transform-origin: 50% 50%;
+  }
+}
+@keyframes progress-out {
+  0% {
+    height: rem(4);
+    transform: scaleX(0.25);
+    transform-origin: 50% 50%;
+  }
+  100% {
+    height: rem(0);
+    transform: scaleX(0);
+    transform-origin: 50% 50%;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(15px) scale(0.6); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+@keyframes fade-in-page {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scaleY(0.8); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scaleY(1);
+  }
+}
+@keyframes fade-out {
+  0% {
+  }
+  100% {
+    display: none;
+  }
+}
