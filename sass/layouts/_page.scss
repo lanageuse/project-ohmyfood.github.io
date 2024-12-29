@@ -1,0 +1,46 @@
+
+/******** Page restaurant ********/
+.hero--restaurant{
+    object-fit: cover;
+    padding: 0;
+}
+
+.restaurant-content{
+    background-color: $bg-color;
+    display: flex;
+    flex-direction: column;
+    gap:rem(40);
+    padding: rem(32) rem(13) rem(0) rem(13);
+    border-radius: $radius-xl $radius-xl 0 0;
+    transform: translateY(rem(-45));
+
+    .restaurant-header{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        .bookmark{
+            margin-top:rem(10) ;
+            padding-inline: rem(20);
+        }
+    }
+
+    .menu-section{
+        display: flex;
+        flex-direction: column;
+        gap:rem(12);
+
+        &__title{}
+        &__items{
+            display: flex;
+            flex-direction: column;
+            gap:rem(12);
+        }
+        &__items{}
+    }
+    .order-section{
+        text-align: center;
+        .btn{
+            padding-inline: rem(49);
+        }
+    }
+}
