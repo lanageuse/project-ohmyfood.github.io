@@ -187,7 +187,6 @@ a {
 }
 .bookmark__icon.fa-solid::before {
   background-image: linear-gradient(#b360db, rgb(222, 110, 219));
-  -webkit-background-clip: text;
   background-clip: text;
   color: rgba(0, 0, 0, 0);
 }
@@ -216,24 +215,24 @@ a {
   flex-direction: column;
   animation: fade-out 0.3s ease-out 3s forwards;
 }
-.loader__content--split {
+.loader__content-split {
   flex-grow: 1;
   overflow: hidden;
 }
-.loader__content--split.screen-top {
+.loader__content-split.screen-top {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: end;
   animation: split-out 4s ease 4s forwards;
 }
-.loader__content--progressbar {
+.loader__content-progressbar {
   background: #6023a9;
   position: relative;
   overflow: hidden;
   animation: progress-in 0.4s ease 0.5s forwards, progress-out 0.2s ease 2.6s forwards;
 }
-.loader__content--progressbar::before {
+.loader__content-progressbar::before {
   content: "";
   position: absolute;
   width: 0%;
