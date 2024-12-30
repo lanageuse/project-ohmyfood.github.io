@@ -129,6 +129,12 @@ a {
   gap: 1.125rem;
 }
 
+.restaurant__content-cards a {
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+}
+
 @media (min-width: 1200px) {
   .process__content {
     padding: 3.125rem 0;
@@ -173,8 +179,19 @@ a {
 }
 .bookmark--anim {
   position: relative;
+  z-index: 10;
   font-size: 1.3125rem;
-  width: 2.5rem;
+  width: 1.5rem;
+  height: 1.3125rem;
+  pointer-events: all;
+}
+.bookmark--anim:hover .fa-regular,
+.bookmark--anim :active .fa-regular {
+  opacity: 0;
+}
+.bookmark--anim:hover .fa-solid,
+.bookmark--anim :active .fa-solid {
+  opacity: 1;
 }
 .bookmark__icon {
   position: absolute;
@@ -192,14 +209,6 @@ a {
   color: rgba(0, 0, 0, 0);
 }
 .bookmark__icon.fa-regular {
-  opacity: 1;
-}
-.bookmark:hover .fa-regular,
-.bookmark :active .fa-regular {
-  opacity: 0;
-}
-.bookmark:hover .fa-solid,
-.bookmark :active .fa-solid {
   opacity: 1;
 }
 
