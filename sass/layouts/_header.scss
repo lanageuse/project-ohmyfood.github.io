@@ -8,10 +8,10 @@
     padding: rem(14) 0 rem(5) 0;
     z-index: 2;
   }
-  &__home{
+  &__home {
     position: absolute;
-    left:rem(20);
-    top:rem(25);
+    left: rem(20);
+    top: rem(25);
   }
   &__logo {
     font-family: $font-family-brand;
@@ -26,5 +26,16 @@
     font-weight: $font-weight-semi-bold;
     padding: 15px 0;
     @include box-shadow(0, 4, 4, 0.25);
+  }
+}
+// Responsive Desktop (lg : min-width:992px)
+@include breakpoint("lg") {
+  .header {
+    &__nav {
+      padding: rem(26) 0;
+    }
+    &__home{
+      top:rem(35);
+    }
   }
 }
