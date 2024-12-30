@@ -12,7 +12,7 @@
       height: 174px;
       width: 100%;
       object-fit: cover;
-      object-position: bottom;
+      object-position: center;
     }
   }
   &__badge {
@@ -52,7 +52,6 @@
     .card {
       &__content {
         padding: 0;
-
       }
       &__info {
         display: flex;

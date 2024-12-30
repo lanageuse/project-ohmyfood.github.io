@@ -422,7 +422,7 @@ a {
   height: 174px;
   width: 100%;
   object-fit: cover;
-  object-position: bottom;
+  object-position: center;
 }
 .card__badge {
   position: absolute;
@@ -679,6 +679,29 @@ a {
 }
 .restaurant-content .order-section .btn {
   padding-inline: 3.0625rem;
+}
+
+@media (min-width: 992px) {
+  .restaurant-content {
+    max-width: 65.9375rem;
+    margin: auto;
+    padding: 2rem 13.0625rem 0rem 13.0625rem;
+  }
+  .restaurant-content .restaurant-header {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .order-section .btn {
+    display: inline-block;
+  }
+}
+@media (min-width: 768px) {
+  .hero--restaurant img {
+    object-fit: cover;
+    object-position: center;
+    max-height: 23.9375rem;
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
