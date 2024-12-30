@@ -187,6 +187,7 @@ a {
 }
 .bookmark__icon.fa-solid::before {
   background-image: linear-gradient(#b360db, rgb(222, 110, 219));
+  -webkit-background-clip: text;
   background-clip: text;
   color: rgba(0, 0, 0, 0);
 }
@@ -499,6 +500,9 @@ a {
   text-align: center;
   color: #99E2D0;
   vertical-align: middle;
+}
+.card--menu:hover, .card--menu:active {
+  cursor: pointer;
 }
 .card--menu:hover .card__check, .card--menu:active .card__check {
   width: 3.6875rem;
