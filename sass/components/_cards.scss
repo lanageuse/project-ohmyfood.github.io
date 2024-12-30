@@ -58,7 +58,7 @@
         gap: rem(5);
         flex-direction: column;
         padding: rem(13) rem(15);
-        flex-grow:1;
+        flex-grow: 1;
         overflow: hidden;
       }
       &__title {
@@ -99,10 +99,13 @@
         }
       }
     }
-    &:hover   .card__check,
-    &:active   .card__check{
-      width: rem(59);
-      opacity: 1;
+    &:hover,
+    &:active {
+      cursor: pointer;
+      .card__check {
+        width: rem(59);
+        opacity: 1;
+      }
     }
   }
 }
