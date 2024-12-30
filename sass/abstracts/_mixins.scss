@@ -10,8 +10,9 @@
 // - $y : décalage vertical de l'ombre (en pixels).
 // - $blur : rayon de flou de l'ombre (en pixels).
 // - $opacity : opacité de la couleur de l'ombre (entre 0 et 1).
-@mixin box-shadow($x, $y, $blur, $opacity) {
-  box-shadow: $x + px $y + px $blur + px rgba($text-color, $opacity);
+// - $color : couleur de l'ombre (en rgb).
+@mixin box-shadow($x, $y, $blur, $opacity, $color: $text-color) {
+  box-shadow: $x + px $y + px $blur + px rgba($color, $opacity);
 }
 
 // Mixin pour générer l'animation fade-in (loader & page)
