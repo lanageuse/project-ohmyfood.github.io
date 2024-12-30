@@ -50,7 +50,7 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    animation: fade-out 0.3s ease-out 3s forwards;
+    animation: fade-out 0.3s ease-out 2.8s forwards;
     &-split {
       flex-grow: 1;
       overflow: hidden;
@@ -65,6 +65,7 @@
     &-progressbar {
       background: darken($pink-dark-color, 20%);
       position: relative;
+      margin: auto;
       overflow: hidden;
       animation: progress-in 0.4s ease 0.5s forwards, progress-out 0.2s ease 2.6s forwards;
       &::before {
@@ -134,13 +135,13 @@
   0% {
     height: rem(0);
     opacity: 0;
-    transform: scaleX(0.55);
+    width:rem(0);
     transform-origin: 50% 50%;
   }
   100% {
     height: rem(4);
     opacity: 1;
-    transform: scaleX(0.35);
+    width:rem(200);
     transform-origin: 50% 50%;
   }
 }
@@ -178,8 +179,13 @@
 }
 @keyframes fade-out {
   0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
   }
   100% {
+    opacity: 0;
     display: none;
   }
 }
