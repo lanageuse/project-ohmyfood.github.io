@@ -501,6 +501,9 @@ a {
   color: #99E2D0;
   vertical-align: middle;
 }
+.card--menu:hover, .card--menu:active {
+  cursor: pointer;
+}
 .card--menu:hover .card__check, .card--menu:active .card__check {
   width: 3.6875rem;
   opacity: 1;
