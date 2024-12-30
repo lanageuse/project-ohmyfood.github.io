@@ -15,7 +15,6 @@
       opacity: 0;
       &::before {
         background-image: linear-gradient(#b360db, rgb(222, 110, 219));
-        -webkit-background-clip: text;
         background-clip: text;
         color: rgba(0, 0, 0, 0);
       }
@@ -51,7 +50,7 @@
     display: flex;
     flex-direction: column;
     animation: fade-out 0.3s ease-out 3s forwards;
-    &--split {
+    &-split {
       flex-grow: 1;
       overflow: hidden;
       &.screen-top {
@@ -62,7 +61,7 @@
         animation: split-out 4s ease 4s forwards;
       }
     }
-    &--progressbar {
+    &-progressbar {
       background: darken($pink-dark-color, 20%);
       position: relative;
       overflow: hidden;
