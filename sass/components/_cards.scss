@@ -3,7 +3,7 @@
   background-color: $white;
   display: flex;
   flex-direction: column;
-  border-radius: d;
+  border-radius: $radius-md;
   overflow: hidden;
 
   &__img {
@@ -55,11 +55,15 @@
 
       }
       &__info {
+        display: flex;
+        gap: rem(5);
+        flex-direction: column;
         padding: rem(13) rem(15);
         flex-grow:1;
         overflow: hidden;
       }
       &__title {
+        font-size: rem(18);
         font-weight: $font-weight-semi-bold;
       }
       &__description {
