@@ -214,7 +214,7 @@ a {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  animation: fade-out 0.3s ease-out 3s forwards;
+  animation: fade-out 0.3s ease-out 2.8s forwards;
 }
 .loader__content-split {
   flex-grow: 1;
@@ -230,6 +230,7 @@ a {
 .loader__content-progressbar {
   background: #6023a9;
   position: relative;
+  margin: auto;
   overflow: hidden;
   animation: progress-in 0.4s ease 0.5s forwards, progress-out 0.2s ease 2.6s forwards;
 }
@@ -332,13 +333,13 @@ a {
   0% {
     height: 0rem;
     opacity: 0;
-    transform: scaleX(0.55);
+    width: 0rem;
     transform-origin: 50% 50%;
   }
   100% {
     height: 0.25rem;
     opacity: 1;
-    transform: scaleX(0.35);
+    width: 12.5rem;
     transform-origin: 50% 50%;
   }
 }
@@ -375,7 +376,14 @@ a {
   }
 }
 @keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
   100% {
+    opacity: 0;
     display: none;
   }
 }
