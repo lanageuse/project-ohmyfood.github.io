@@ -86,6 +86,11 @@ a {
     gap: rem(18);
   }
 }
+.restaurant__content-cards a{
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+}
 
 // Responsive Desktop (lg : min-width:992px)
 @include breakpoint("xl") {
