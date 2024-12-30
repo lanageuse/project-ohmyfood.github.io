@@ -475,6 +475,9 @@ a {
 .card--menu .card__title {
   font-size: 1.125rem;
   font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .card--menu .card__description {
   font-size: 0.9375rem;
@@ -482,11 +485,11 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.card--menu .card__price {
-  padding: 0.8125rem 0.9375rem;
-  align-self: flex-end;
+.card--menu .card__details {
+  display: flex;
+  justify-content: space-between;
 }
-.card--menu .card__price-value {
+.card--menu .card__price {
   font-size: 0.9375rem;
 }
 .card--menu .card__check {
