@@ -12,7 +12,7 @@
 
 <body>
     <!-- loader -->
-    <div class="loader">
+    <!-- <div class="loader">
         <div class="loader__content">
             <div class="loader__content--split screen-top">
                 <div class="loader__logo">
@@ -36,7 +36,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- header -->
     <header class="header">
         <nav class="header__nav">
@@ -53,12 +53,12 @@
         <section class="hero">
             <h1 class="title">Réservez le menu qui vous convient</h1>
             <h2 class="subtitle">Découvrez des restaurants d’exception, sélectionnés par nos soins.</h2>
-            <a href="#" class="btn btn--gradient"><span>Explorer nos restaurants</span></a>
+            <a href="#nos-restaurants" class="btn btn--gradient"><span>Explorer nos restaurants</span></a>
         </section>
         <!-- section workflow -->
         <section class="process">
-            <h2 class="title">Fonctionnement</h2>
             <div class="process__content">
+                <h2 class="title">Fonctionnement</h2>
                 <ul class="process__list">
                     <li class="process__list-item">
                         <i class="fa-solid fa-mobile-screen-button"></i> Choisissez un restaurant
@@ -73,27 +73,83 @@
             </div>
         </section>
         <!-- section restaurant -->
-        <section class="restaurant">
-            <h2 class="title">Restaurants</h2>
+        <section class="restaurant" id="nos-restaurants">
             <div class="restaurant__content">
-                <a href="./restaurants/la-palette-du-gout.html">
-                    <article class="card card--restaurant">
-                        <div class="card__img">
-                            <span class="card__badge btn--badge">Nouveau</span>
-                            <img src="./assets/images/restaurants/la-palette-du-gout.jpg" alt="">
-                        </div>
-                        <div class="card__content">
-                            <div class="card__info">
-                                <h3 class="card__info-title">La palette du goût</h3>
-                                <p class="card__info-location">Ménilmontant</p>
+                <h2 class="title">Restaurants</h2>
+                <div class="restaurant__content-cards">
+                    <a href="./restaurants/la-palette-du-gout.html">
+                        <article class="card card--restaurant">
+                            <div class="card__img">
+                                <span class="card__badge btn--badge">Nouveau</span>
+                                <img src="./assets/images/restaurants/la-palette-du-gout.jpg" alt="">
                             </div>
-                            <div class="card__actions bookmark bookmark--anim">
-                                <i class="bookmark__icon fa-regular fa-heart"></i>
-                                <i class="bookmark__icon fa-solid fa-heart"></i>
+                            <div class="card__content">
+                                <div class="card__info">
+                                    <h3 class="card__info-title">La palette du goût</h3>
+                                    <p class="card__info-location">Ménilmontant</p>
+                                </div>
+                                <div class="card__actions bookmark bookmark--anim">
+                                    <i class="bookmark__icon fa-regular fa-heart"></i>
+                                    <i class="bookmark__icon fa-solid fa-heart"></i>
+                                </div>
                             </div>
-                        </div>
-                    </article>
-                </a>
+                        </article>
+                    </a>
+                    <a href="./restaurants/la-palette-du-gout.html">
+                        <article class="card card--restaurant">
+                            <div class="card__img">
+                                <span class="card__badge btn--badge">Nouveau</span>
+                                <img src="./assets/images/restaurants/la-palette-du-gout.jpg" alt="">
+                            </div>
+                            <div class="card__content">
+                                <div class="card__info">
+                                    <h3 class="card__info-title">La palette du goût</h3>
+                                    <p class="card__info-location">Ménilmontant</p>
+                                </div>
+                                <div class="card__actions bookmark bookmark--anim">
+                                    <i class="bookmark__icon fa-regular fa-heart"></i>
+                                    <i class="bookmark__icon fa-solid fa-heart"></i>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="./restaurants/la-palette-du-gout.html">
+                        <article class="card card--restaurant">
+                            <div class="card__img">
+                                <span class="card__badge btn--badge">Nouveau</span>
+                                <img src="./assets/images/restaurants/la-palette-du-gout.jpg" alt="">
+                            </div>
+                            <div class="card__content">
+                                <div class="card__info">
+                                    <h3 class="card__info-title">La palette du goût</h3>
+                                    <p class="card__info-location">Ménilmontant</p>
+                                </div>
+                                <div class="card__actions bookmark bookmark--anim">
+                                    <i class="bookmark__icon fa-regular fa-heart"></i>
+                                    <i class="bookmark__icon fa-solid fa-heart"></i>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="./restaurants/la-palette-du-gout.html">
+                        <article class="card card--restaurant">
+                            <div class="card__img">
+                                <span class="card__badge btn--badge">Nouveau</span>
+                                <img src="./assets/images/restaurants/la-palette-du-gout.jpg" alt="">
+                            </div>
+                            <div class="card__content">
+                                <div class="card__info">
+                                    <h3 class="card__info-title">La palette du goût</h3>
+                                    <p class="card__info-location">Ménilmontant</p>
+                                </div>
+                                <div class="card__actions bookmark bookmark--anim">
+                                    <i class="bookmark__icon fa-regular fa-heart"></i>
+                                    <i class="bookmark__icon fa-solid fa-heart"></i>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
@@ -103,10 +159,10 @@
         <ul class="footer__list">
             <li class="footer__list-item footer__list-item--semibold"><a href="#"><i class="fa-solid fa-utensils"></i>
                     Proposer un restaurant</a></li>
-            <li class="footer__list-item footer__list-item--semibold"><a href="#"><i
+            <li class="footer__list-item footer__list-item--semibold footer__list-item--last-semibold"><a href="#"><i
                         class="fa-solid fa-handshake-angle"></i> Devenir partenaire</a></li>
             <li class="footer__list-item"><a href="#">Mentions légales</a></li>
-            <li class="footer__list-item"><a href="#">Contact</a></li>
+            <li class="footer__list-item"><a href="mailto:contact@ohmyfood.com">Contact</a></li>
         </ul>
     </footer>
 </body>

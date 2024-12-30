@@ -42,3 +42,13 @@
     }
   }
 }
+
+// Responsive Desktop (lg : min-width:992px)
+@include breakpoint("lg"){
+  .process__list{
+    flex-direction: row;
+    &-item{
+      flex-grow: 1;
+    }
+  }
+}

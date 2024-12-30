@@ -1,87 +1,134 @@
 // Import des gg fonts
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap");
 
 body {
-    font-family: $font-family-text;
-    font-size: $font-size-default;
+  font-family: $font-family-text;
+  font-size: $font-size-default;
+  font-weight: $font-weight-normal;
+  background-color: $bg-color;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: $font-weight-bold;
+  font-size: rem(24);
+  &--brand {
+    font-family: $font-family-brand;
     font-weight: $font-weight-normal;
-    background-color: $bg-color;
+    font-size: rem(28);
+  }
 }
 
-a{
-    color: $text-color;
-    text-decoration: none;
-}
-
-.main{
-    display: flex;
-    flex-direction: column;
-}
-
-.title{
-    font-weight: $font-weight-bold;
-    font-size:rem(24);
-    &--brand{
-        font-family: $font-family-brand;
-        font-weight: $font-weight-normal;
-        font-size:rem(28);
+.subtitle {
+  position: relative;
+  font-size: rem(18);
+  font-weight: $font-weight-normal;
+  color: $grey-dark-color;
+  &--underline {
+    font-size: rem(16);
+    font-weight: $font-weight-light;
+    line-height: rem(32);
+    text-transform: uppercase;
+    &::after {
+      content: "";
+      display: block;
+      left: 0;
+      bottom: 0;
+      width: rem(40);
+      height: rem(3);
+      background: $green-light-color;
     }
-}
-
-.subtitle{
-    position: relative;
-    font-size:rem(18);
-    font-weight: $font-weight-normal;
-    color:$grey-dark-color;
-    &--underline{
-        font-size:rem(16);
-        font-weight: $font-weight-light;
-        line-height: rem(32);
-        text-transform: uppercase;
-        &::after{
-            content: "";
-            display: block;
-            left:0;
-            bottom: 0;
-            width:rem(40);
-            height: rem(3);
-            background: $green-light-color;
-        }
-    }
+  }
 }
 /******** homepage ********/
 //hero section
 
-.hero{
-    display: flex;
-    flex-direction: column;
-    gap: rem(14);
-    align-items: center;
-    text-align: center;
-    padding: rem(39) rem(30) rem(55) rem(30);
-    .title{
-        padding:rem(6) rem(30);
-    }
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: rem(14);
+  align-items: center;
+  text-align: center;
+  padding: rem(39) rem(30) rem(55) rem(30);
+  .title {
+    padding: rem(6) rem(30);
+  }
 }
 
 // process section
-.process{
-    background-color: $white;
+.process {
+  background-color: $white;
+  &__content {
     display: flex;
     flex-direction: column;
-    gap: rem(26);
-    padding: rem(49) rem(20)  rem(67) rem(20);
+    gap: rem(29);
+    padding: rem(49) rem(20) rem(67) rem(20);
+  }
 }
 // restaurant section
-.restaurant{
+.restaurant__content {
+  display: flex;
+  flex-direction: column;
+  gap: rem(20);
+  padding: rem(55) rem(20) rem(66) rem(20);
+  &-cards {
     display: flex;
     flex-direction: column;
-    gap: rem(26);
-    padding: rem(55) rem(20)  rem(67) rem(20);
-    &__content{
-        display: flex;
-        flex-direction: column;
-        gap: rem(18);
-    }
+    gap: rem(18);
+  }
 }
 
+// Responsive Desktop (lg : min-width:992px)
+@include breakpoint("xl") {
+  .process__content {
+    padding: rem(50) 0;
+    max-width: rem(1080);
+    margin: auto;
+  }
+  .restaurant__content {
+    padding: rem(49) 0 rem(67) 0;
+    max-width: rem(1080);
+    margin: auto;
+  }
+  .restaurant__content-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(50% - rem(50)), 1fr));
+    row-gap: rem(50);
+    column-gap: rem(100);
+  }
+  .hero {
+    padding: rem(30);
+    .title {
+      font-size: rem(40);
+      padding: rem(6) rem(30);
+    }
+    .subtitle {
+      margin-bottom: rem(20);
+    }
+  }
+}
+
+// Responsive Desktop (md : min-width:768px)
+@include breakpoint-between ("md", "xl") {
+  .process__content {
+    padding: rem(50) rem(40);
+  }
+  .restaurant__content {
+    padding: rem(49) rem(40) rem(67) rem(40);
+  }
+  .restaurant__content-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(50% - rem(25)), 1fr));
+    row-gap: rem(25);
+    column-gap: rem(50);
+  }
+}
