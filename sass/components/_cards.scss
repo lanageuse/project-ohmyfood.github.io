@@ -64,6 +64,9 @@
       &__title {
         font-size: rem(18);
         font-weight: $font-weight-semi-bold;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       &__description {
         font-size: rem(15);
@@ -71,12 +74,12 @@
         overflow: hidden;
         text-overflow: ellipsis;
       }
+      &__details {
+        display: flex;
+        justify-content: space-between;
+      }
       &__price {
-        padding: rem(13) rem(15);
-        align-self: flex-end;
-        &-value {
-          font-size: rem(15);
-        }
+        font-size: rem(15);
       }
       &__check {
         background-color: $green-light-color;
