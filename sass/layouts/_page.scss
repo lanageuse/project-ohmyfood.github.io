@@ -1,0 +1,71 @@
+/******** Page restaurant ********/
+.hero--restaurant {
+  object-fit: cover;
+  padding: 0;
+}
+
+.restaurant-content {
+  background-color: $bg-color;
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+  padding: rem(32) rem(13) rem(0) rem(13);
+  border-radius: $radius-xl $radius-xl 0 0;
+  transform: translateY(rem(-45));
+
+  .restaurant-header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    .bookmark {
+      margin-top: rem(10);
+      padding-inline: rem(20);
+    }
+  }
+
+  .menu-section {
+    display: flex;
+    flex-direction: column;
+    gap: rem(12);
+
+    &__items {
+      display: flex;
+      flex-direction: column;
+      gap: rem(12);
+    }
+  }
+  .order-section {
+    text-align: center;
+    .btn {
+      padding-inline: rem(49);
+    }
+  }
+}
+// Responsive Desktop (lg : min-width:992px)
+@include breakpoint("lg") {
+  .restaurant-content {
+    max-width: rem(1055);
+    margin: auto;
+    padding: rem(32) rem(209) rem(0) rem(209);
+    .restaurant-header {
+      justify-content: center;
+      gap: rem(24);
+    }
+  }
+  .order-section {
+    .btn {
+      display: inline-block;
+    }
+  }
+}
+// Responsive Desktop (md : min-width:768px)
+@include breakpoint("md") {
+  .hero--restaurant {
+    img {
+      object-fit: cover;
+      object-position: center;
+      max-height: rem(383);
+      width: 100%;
+    }
+  }
+}

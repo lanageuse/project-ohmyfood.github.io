@@ -5,7 +5,7 @@
   background-color: $grey-dark-color;
   color: $white;
   padding: rem(22) rem(25);
-  .title__brand {
+  .title--brand {
     font-size: rem(18);
     font-weight: $font-weight-semi-bold;
   }
@@ -32,4 +32,20 @@
       }
     }
   }
+}
+// Responsive Desktop (lg : min-width:992px)
+@include breakpoint("lg"){
+  .footer{
+    flex-direction: row-reverse;
+    padding-top: rem(64) ;
+    padding: rem(64) rem(67) rem(25) rem(67);
+    gap: rem(70);
+    align-items: center;
+    &__list{
+      flex-direction: row;
+    }
+  }
+  .footer__list-item--last-semibold {
+    margin-right: rem(40); // Exemple de marge droite
+}
 }

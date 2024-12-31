@@ -4,9 +4,10 @@ $font-family-text : 'Roboto', sans-serif;
 $font-size-default : 16px;
 
 // font-weight
-$font-weight-normal : 300;
-$font-weight-semi-bold : 500;
 $font-weight-bold: 700;
+$font-weight-semi-bold : 500;
+$font-weight-normal : 300;
+$font-weight-light : 100;
 
 //color
 $pink-light-color : #FF79DA;
@@ -23,8 +24,17 @@ $icon-color:#7E7E7E;
 $white : #FFFFFF;
 
 // border-radius
-$radius-xl : 25px;
-$radius-l : 20px;
-$radius-m : 15px;
 $radius-xs : 2px;
+$radius-lg : 20px;
+$radius-md : 15px;
+$radius-xl : 25px;
+
+//breakpoints
+$breakpoints: (
+  "sm": 576px,  // Small (tablette)
+  "md": 768px,  // Medium (tablette large)
+  "lg": 992px,  // Large (desktop)
+  "xl": 1200px, // Extra Large (desktop large)
+  "xxl": 1400px // Extra Extra Large (4K)
+);
 

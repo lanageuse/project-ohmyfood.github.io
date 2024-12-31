@@ -1,6 +1,6 @@
 .btn {
   position: relative;
-  display: block;
+  width: fit-content;
   text-align: center;
   font-weight: $font-weight-semi-bold;
   color: $white;
@@ -10,20 +10,23 @@
     @include bg-gradient;
     @include box-shadow(0, 4, 10, 0.25);
     overflow: hidden;
+    transition: box-shadow ease 0.8s;
     &:after {
       content: "";
       position: absolute;
+      background: rgba($white, 0.15);
+      border-radius: $radius-xl;
       width: 100%;
       height: 100%;
       right: 0;
       top: 0;
-      background: rgba($white, 0.15);
       opacity: 0;
       transition: opacity ease-in-out 0.2s;
     }
     &:active,
     &:hover,
     &:focus {
+      @include box-shadow(0, 2, 10, 0.6, lighten($pink-dark-color, 0.5));
       &:after {
         opacity: 1;
       }

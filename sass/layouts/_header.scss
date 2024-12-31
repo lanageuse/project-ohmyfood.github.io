@@ -3,9 +3,15 @@
     position: relative;
     display: flex;
     justify-content: center;
+    background-color: $white;
     @include box-shadow(0, 2, 4, 0.15);
     padding: rem(14) 0 rem(5) 0;
     z-index: 2;
+  }
+  &__home {
+    position: absolute;
+    left: rem(20);
+    top: rem(25);
   }
   &__logo {
     font-family: $font-family-brand;
@@ -14,11 +20,22 @@
   &__location {
     display: flex;
     justify-content: center;
-    gap: rem(10);
+    gap: rem(17);
     background-color: $grey-light-color;
     color: $grey-dark-color;
     font-weight: $font-weight-semi-bold;
     padding: 15px 0;
     @include box-shadow(0, 4, 4, 0.25);
+  }
+}
+// Responsive Desktop (lg : min-width:992px)
+@include breakpoint("lg") {
+  .header {
+    &__nav {
+      padding: rem(26) 0;
+    }
+    &__home{
+      top:rem(35);
+    }
   }
 }

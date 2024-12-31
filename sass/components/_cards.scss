@@ -3,7 +3,7 @@
   background-color: $white;
   display: flex;
   flex-direction: column;
-  border-radius: $radius-m;
+  border-radius: $radius-md;
   overflow: hidden;
 
   &__img {
@@ -12,7 +12,7 @@
       height: 174px;
       width: 100%;
       object-fit: cover;
-      object-position: bottom;
+      object-position: center;
     }
   }
   &__badge {
@@ -23,6 +23,7 @@
     color: $green-dark-color;
     border-radius: $radius-xs;
     font-size: rem(14);
+    font-weight: $font-weight-semi-bold;
     padding: rem(10) rem(12);
     @include box-shadow(0, 2, 4, 0.15);
   }
@@ -47,47 +48,66 @@
   // Variantes card menu
   &--menu {
     position: relative;
-    .card__content {
-      align-items: end;
-      padding: rem(15);
-      margin-right: rem(59);
-    }
-    .card__info{
-      &-title {
-        font-weight: $font-weight-semi-bold;
+    @include box-shadow(0, 4, 15, 0.1);
+    .card {
+      &__content {
+        padding: 0;
       }
-      &-description {
-        font-size: rem(15);
-        max-width: 200px;
+      &__info {
+        display: flex;
+        gap: rem(5);
+        flex-direction: column;
+        padding: rem(13) rem(15);
+        flex-grow: 1;
+        overflow: hidden;
+      }
+      &__title {
+        font-size: rem(18);
+        font-weight: $font-weight-semi-bold;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
       }
-    }
-    .card__price {
-      &-value{
-      font-size: rem(15);
+      &__description {
+        font-size: rem(15);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      &__details {
+        display: flex;
+        justify-content: space-between;
+      }
+      &__price {
+        font-size: rem(15);
+      }
+      &__check {
+        background-color: $green-light-color;
+        min-height: 100%;
+        width: rem(0);
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.2s ease, width 0.2s ease;
+        i {
+          border-radius: $radius-xl;
+          background: $white;
+          width: 20px;
+          height: 20px;
+          line-height: 20px;
+          text-align: center;
+          color: $green-light-color;
+          vertical-align: middle;
+        }
       }
     }
-    .card__check {
-      background-color: $green-light-color;
-      position: absolute;
-      height: 100%;
-      width: rem(59);
-      right: 0;
-      top: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      i {
-        border-radius: $radius-xl;
-        background: $white;
-        width: 20px;
-        height: 20px;
-        line-height: 20px;
-        text-align: center;
-        color: $green-light-color;
-        vertical-align: middle;
+    &:hover,
+    &:active {
+      cursor: pointer;
+      .card__check {
+        width: rem(59);
+        opacity: 1;
       }
     }
   }
