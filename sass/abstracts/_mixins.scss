@@ -37,7 +37,7 @@
 
 @mixin breakpoint-between($min-size, $max-size) {
   @if map-has-key($breakpoints, $min-size) and map-has-key($breakpoints, $max-size) {
-    @media (min-width: map-get($breakpoints, $min-size)) and (max-width: map-get($breakpoints, $max-size) - 1px) {
+    @media (min-width: map-get($breakpoints, $min-size)) and (max-width: map-get(($breakpoints, $max-size) - 1px)) {
       @content;
     }
   } @else {
