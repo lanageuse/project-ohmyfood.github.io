@@ -26,7 +26,7 @@
     &.fa-solid {
       opacity: 0;
       &::before {
-        background-image: linear-gradient(#b360db, rgb(222, 110, 219));
+        background-image: linear-gradient(#b360db, #de6edb);
         -webkit-background-clip: text;
         background-clip: text;
         color: rgba(0, 0, 0, 0);
