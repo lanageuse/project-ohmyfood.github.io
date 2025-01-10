@@ -106,6 +106,9 @@ a {
 .hero .title {
   padding: 0.375rem 1.875rem;
 }
+.hero .btn.btn--gradient {
+  margin-top: 1.6875rem;
+}
 
 .process {
   background-color: #FFFFFF;
@@ -203,7 +206,7 @@ a {
   opacity: 0;
 }
 .bookmark__icon.fa-solid::before {
-  background-image: linear-gradient(#b360db, rgb(222, 110, 219));
+  background-image: linear-gradient(#b360db, #de6edb);
   -webkit-background-clip: text;
   background-clip: text;
   color: rgba(0, 0, 0, 0);
