@@ -667,7 +667,7 @@ a {
   .footer__list {
     flex-direction: row;
   }
-  .footer__list-item--last-semibold {
+  .footer__list-item--last {
     margin-right: 2.5rem;
   }
 }
